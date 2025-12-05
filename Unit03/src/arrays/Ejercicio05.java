@@ -1,5 +1,6 @@
 package arrays;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejercicio05 {
@@ -12,16 +13,7 @@ public class Ejercicio05 {
 		int num;
 		
 		//The sum of all the numbers
-		int sum;
-		
-		//The number to make the comparison
-		int compNum;
-		
-		//The smallest number
-		int small;
-		
-		//The largest number
-		int big;
+		int sum = 0;
 		
 		//The table where the numbers will be kept
 		int table[] = new int [10];
@@ -30,15 +22,23 @@ public class Ejercicio05 {
 		for (int i = 0; i < table.length; i++) {
 			System.out.println("Introduzca un número:");
 			num = sc.nextInt();
-			table[i] = i;
-			sum += num;
+			table[i] = num;
 			
-			}
+			//The sum of all the numbers
+			sum += num;
 		}
 		
-		//We sum all the numbers of the table just made
+		//To know which number is the largest and which one is the smallest, we order the list
+		Arrays.sort(table);
 		
-
+		//We show the results in the console
+		System.out.println("La suma de todos los números es " + sum);
+		System.out.println("El número más pequeño es " + table[0] + ", mientras que el más grande es " + table[9]);
+		
+		//Close Scanner
+		sc.close();
+		
+		
 	}
 
 }
