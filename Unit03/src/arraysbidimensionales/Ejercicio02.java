@@ -1,6 +1,6 @@
 package arraysbidimensionales;
 
-import java.util.Random;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejercicio02 {
@@ -9,32 +9,22 @@ public class Ejercicio02 {
 		//Create a Scanner
 		Scanner sc = new Scanner (System.in);
 		
-
-	}
-	
-	//Shows the marks' table with the students inside rows and the marks inside columns
-	private static void fillMark (Scanner sc, double[][] mark) {
+		//The table with the data from the students (4 students and 5 subjects)
+		double table[][] = new double[4][5];
 		
-		//The number of students
-		final int STUDENT = 4;
-				
-		//The number of subjects
-		final int SUBJECT = 5;
-		
-		//The table with all the marks
-		double[][] marks = new double [STUDENT][SUBJECT];
-		
-		//The function to fill the table with the students' grades
-		fillMark (sc, mark);
-		
-		for (int studentIndex = 0; studentIndex < STUDENT; studentIndex++) {
-			System.out.println("Introduce las notas del alumno " + (studentIndex + 1));
-			
-			for (int subjectIndex = 0; subjectIndex < SUBJECT; subjectIndex++) {
-				System.out.println("Asignatura " + (subjectIndex + 1) + ":");
-				
+		//The console waits for the user to introduce all the grades
+		for (int i = 0; i < table[i].length; i++) {
+			for (int j = 0; j < table.length; j++) {
+				System.out.println("Introduzca una nota: ");
+				table [j][i] = sc.nextDouble();
 			}
 		}
+		
+		//The console shows the table
+		System.out.println(Arrays.deepToString(table));
+		
+		//Close Scanner
+		sc.close();
 	}
 
 }

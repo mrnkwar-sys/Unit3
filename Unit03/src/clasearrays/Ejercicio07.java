@@ -14,7 +14,7 @@ public class Ejercicio07 {
 		//The table will save once the 1, twice the 2, three times the 3...
 		for(int i = 1; i <= 10; i++) {
 			Arrays.fill(table, value, value + i, i);
-			value++;
+			value += i;
 		}
 		
 		//Show the table in the console
