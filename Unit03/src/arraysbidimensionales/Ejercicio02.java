@@ -16,7 +16,7 @@ public class Ejercicio02 {
 		double grade;
 		
 		//The number of the student
-		int num = 0;
+		int num = 1;
 		
 		//The largest grade of the student
 		double max = 0;
@@ -39,7 +39,7 @@ public class Ejercicio02 {
 		for (int k = 0; k < marks.length; k++) {
 			max = marks[k][0];
 			min = marks[k][0];
-			System.out.print("Alumno " + (++num));
+			System.out.print("Alumno " + (num++) + "\t");
 			for (int l = 0; l < marks[k].length; l++) {
 				System.out.print("\t" + marks[k][l] + "\t");
 			}
