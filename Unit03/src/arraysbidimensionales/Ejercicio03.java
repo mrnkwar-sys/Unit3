@@ -26,6 +26,24 @@ public class Ejercicio03 {
 		
 		//Now that the user has told us how is the table they want, we establish it
 		table = new int [rows][col];
+		
+		//The content of the cell [i][j] must be 10*(i+j)
+		for (int i=0; i < table.length; i++) {
+			for (int j=0; j < col; j++) {
+				table[i][j] = 10*(i+j);
+			}
+		}
+		
+		//The table appears in the console
+		for(int i=0; i < table.length; i++) {
+			for(int j=0; j < col; j++) {
+				System.out.print(table[i][j] + "\t");
+			}
+			System.out.println();
+		}
+		
+		//Close Scanner
+		sc.close();
 
 	}
 
