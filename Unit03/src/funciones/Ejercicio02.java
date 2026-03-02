@@ -15,7 +15,7 @@ public class Ejercicio02 {
 	}
 	
 	//This function looks for the largest number of the table "t"
-	public static int maxNum(int t[]) {
+	static int maxNum(int t[]) {
 		if (t == null || t.length == 0) {
 			throw new IllegalArgumentException("La tabla no puede ser nula");
 		}
