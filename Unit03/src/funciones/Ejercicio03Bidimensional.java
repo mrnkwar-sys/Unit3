@@ -6,7 +6,7 @@ public class Ejercicio03Bidimensional {
 		//Create a bidimensional table
 		int bidimensionalTable[][] = {
 				{1, 2, 3},
-				{3, 5, 0},
+				{2, 5, 0},
 				{3, 0, 5}
 		};
 		
