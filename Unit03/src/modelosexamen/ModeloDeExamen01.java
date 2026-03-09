@@ -72,10 +72,14 @@ public class ModeloDeExamen01 {
 		//The position in the hiddenMessageTable that will tell which letter are we looking for in the text
 		int position = 0;
 		
+		//The last position kept 
+		int lastInitialPosition = 0;
+		
 		for (int i = 0; i < textTable.length; i++) {
 			if (textTable[i] == hiddenMessageTable[position]) {
 				if (position == 0) {
 					initialPositions += " " + i;
+					lastInitialPosition = i;
 				}
 				position++;
 			}
@@ -88,6 +92,9 @@ public class ModeloDeExamen01 {
 			 * A lo mejor si, al salir del for position!=0, eso significa que ha vuelto a empezar a buscar, pero no ha terminado
 			 * Quizas tenga que poner una condicion para que si, pasa eso, reemplace el ultimo valor añadido a la String por una cadena vacia
 			 */
+			if (position != 0 && i == textTable.length - 1) {
+				initialPositions = initialPositions.replace(String.valueOf(lastInitialPosition), "");
+			}
 		}
 		
 		//Turn the String into a table
