@@ -25,8 +25,8 @@ public class Ejercicio14 {
 		System.out.println("Introduzca una frase: ");
 		phrase = sc.nextLine();
 		
-		//We remove all the blank spaces from the phrase
-		phrase = phrase.trim().replace(" ", "");
+		//We remove all the blank spaces from the phrase and turn all the letters into small letters
+		phrase = phrase.trim().replace(" ", "").toLowerCase();
 		
 		//Fill the phraseCharacters table with the characters from the phrase
 		phraseCharacters = phrase.toCharArray();
@@ -34,11 +34,25 @@ public class Ejercicio14 {
 		//Order the phraseCharacters table alphabetically
 		Arrays.sort(phraseCharacters);
 		
-		for (int i = phraseCharacters.length - 1; i >= 0 ; i--) {
-			if (i < phraseCharacters.length - 1 && phraseCharacters[i] != phraseCharacters[i+1]) {
-				letter = phraseCharacters[i];
+//		for (int i = phraseCharacters.length - 1; i >= 0 ; i--) {
+//			if (i < phraseCharacters.length - 1 && phraseCharacters[i] != phraseCharacters[i+1]) {
+//				letter = phraseCharacters[i+1];
+//				System.out.println(letter + ": " + times + " veces");
+//				times = 0;
+//			}
+//			times++;
+//		}
+		
+		for (int i = 0; i < phraseCharacters.length; i++) {
+			if (i > 0 && phraseCharacters[i] != phraseCharacters[i-1]) {
+				letter = phraseCharacters[i-1];
 				System.out.println(letter + ": " + times + " veces");
 				times = 0;
+			}
+			if (i == phraseCharacters.length -1) {
+				times++;
+				letter = phraseCharacters[i];
+				System.out.println(letter + ": " + times + " veces");
 			}
 			times++;
 		}
